@@ -83,7 +83,7 @@
             <artifactId>scalatest-maven-plugin</artifactId>
             <version>2.0.2</version>
             <configuration>
-                <reportsDirectory>C:\Users\Palla\OneDrive\Documents\GitHub\expo_jenkins</reportsDirectory>
+                <reportsDirectory>C:\Users\Subha\OneDrive\Documents\GitHub\expo_jenkins-main</reportsDirectory>
             </configuration>
             <executions>
                 <execution>
