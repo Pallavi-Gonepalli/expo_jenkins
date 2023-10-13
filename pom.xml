@@ -22,7 +22,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>expo-project</artifactId>
+    <artifactId>expo_jenkins</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -83,7 +83,7 @@
             <artifactId>scalatest-maven-plugin</artifactId>
             <version>2.0.2</version>
             <configuration>
-                <reportsDirectory>C:\Users\Palla\OneDrive\Documents\GitHub\expo-project</reportsDirectory>
+                <reportsDirectory>C:\Users\Palla\OneDrive\Documents\GitHub\expo_jenkins</reportsDirectory>
             </configuration>
             <executions>
                 <execution>

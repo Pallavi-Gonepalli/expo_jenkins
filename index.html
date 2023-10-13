@@ -3,8 +3,10 @@
 
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" href="./login.css">    
-    <link href="https://w7.pngwing.com/pngs/679/92/png-transparent-pink-floral-letter-q-art-letter-q-flowers-letter-q-png-graphics-flower-a.png" rel="icon">
+    <link rel="stylesheet" href="./login.css">
+    <link
+        href="https://w7.pngwing.com/pngs/679/92/png-transparent-pink-floral-letter-q-art-letter-q-flowers-letter-q-png-graphics-flower-a.png"
+        rel="icon">
 </head>
 
 <body>
@@ -16,81 +18,17 @@
             <input placeholder="username" type="text" id="username" name="username" required>
 
             <input placeholder="password" type="password" id="password" name="password" required> <br> <br>
+            
+            <button type="submit">Login</button><br> <br>
 
-            <button type="button" onclick="login()">Login</button> <br> <br>
-
-            <p>Don't have an account? <a href="javascript:void(0);" onclick="showRegisterForm()">Register</a></p>
+            <p>Don't have an account? <a href="javascript:void(0);" onclick="submit">Register</a></p>
         </form>
 
     </div>
 
-    <div class="container" style="display: none;" id="register-container">
-
-        <form id="register-form">
-            <h2>New Registration</h2>
-
-            <input placeholder="username" type="text" id="new-username" name="new-username" required>
-
-            <input placeholder="password" type="password" id="new-password" name="new-password" required> <br> <br>
-
-            <button type="button" onclick="register()">Register</button> <br> <br>
-
-            <p>Already have an account? <a href="javascript:void(0);" onclick="showLoginForm()">Login</a></p>
-
-        </form>
-    </div>
-
-    <script>
-        // Define an array to store registered users.
-        const registeredUsers = [
-            { username: 'shafi', password: 'shafs' },
-        ];
-
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
 
 
-            let loggedIn = false;
-            for (let i = 0; i < registeredUsers.length; i++) {
-                if (registeredUsers[i].username === username && registeredUsers[i].password === password) {
-                    loggedIn = true;
-                    break;
-                }
-            }
 
-            if (loggedIn) {
-                window.location.href = "./dashboard.html";
-            } else {
-                alert('Login failed. Please check your username and password.');
-            }
-        }
-
-        function register() {
-            const newUsername = document.getElementById('new-username').value;
-            const newPassword = document.getElementById('new-password').value;
-
-            // Check if the username is already registered.
-            if (registeredUsers.some(user => user.username === newUsername)) {
-                alert('Username already exists. Please choose a different username.');
-            } else {
-                // Add the new user to the array of registered users.
-                registeredUsers.push({ username: newUsername, password: newPassword });
-                alert('Registration successful. New user created.');
-                showLoginForm(); // Automatically switch to the login form.
-            }
-        }
-
-        function showRegisterForm() {
-            document.getElementById('login-form').style.display = 'none';
-            document.getElementById('register-container').style.display = 'block';
-        }
-
-        function showLoginForm() {
-            document.getElementById('register-container').style.display = 'none';
-            document.getElementById('login-form').style.display = 'block';
-        }
-    </script>
 </body>
 
 </html>
